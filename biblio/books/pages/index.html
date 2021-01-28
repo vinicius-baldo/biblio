@@ -1,0 +1,131 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} UI Tables {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+      <div class="panel-header panel-header-sm">
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title"> Torneios </h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class=" text-primary">
+                      <th>
+                        Torneio
+                      </th>
+                      <th>
+                        Buy-In
+                      </th>
+                      <th class="text-right">
+                        Horário
+                      </th>
+                    </thead>
+                    <tbody>
+                    {{ % for item in form %}}	
+                      <tr>
+                        <td>
+                          item.descricao
+                        </td>
+                        <td>
+                          item.buy_in
+                        </td>
+                        <td class="text-right">
+                          item.inicio
+                        </td>
+                      </tr>
+                    {{% endfor%}}
+                      <tr>
+                        <td>
+                          Turbo Series 19 
+                        </td>
+                        <td>
+                          16.50
+                        </td>
+                        <td>
+                          Holden Progressive KO
+                        </td>
+                        <td class="text-right">
+                          Apr 7, 15:00
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="card card-plain">
+              <div class="card-header">
+                <h4 class="card-title"> Resultados </h4>
+                <p class="category"> Dia anterior </p>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class=" text-primary">
+                      <th>
+                        Torneio
+                      </th>
+                      <th>
+                        Buy-In
+                      </th>
+                      <th>
+                        Posicão 
+                      </th>
+                      <th class="text-right">
+                        Resultado
+                      </th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          KO Progressive 15
+                        </td>
+                        <td>
+                          15
+                        </td>
+                        <td>
+                          50
+                        </td>
+                        <td class="text-right">
+                          $ 115.35
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Bounty Builder On-Demand
+                        </td>
+                        <td>
+                          3.3
+                        </td>
+                        <td>
+                          2
+                        </td>
+                        <td class="text-right">
+                          $ 149.15
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}
